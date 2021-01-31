@@ -19,7 +19,4 @@
 */
 
 import Route from '@ioc:Adonis/Core/Route'
-
-Route.group(() => {
-	Route.resource('users', 'Users/UsersController').apiOnly()
-}).prefix('api')
+import './Routes/Users'
