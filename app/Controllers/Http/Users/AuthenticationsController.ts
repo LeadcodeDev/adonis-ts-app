@@ -23,7 +23,7 @@ export default class AuthenticationsController {
 			})
 		})
 
-		const token = await auth.use('api').attempt(data.email, data.password)
+		const token = await auth.use('api').attempt(data.email, data.password, { expiresIn: '10 days' })
 		return token.toJSON()
 	}
 
